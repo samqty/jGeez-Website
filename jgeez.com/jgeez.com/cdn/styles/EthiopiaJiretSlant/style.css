@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'EthiopiaJiretSlant';
+    src: url('fonts/EthiopiaJiretSlant.eot');
+    src: url('fonts/EthiopiaJiretSlant.eot?#iefix') format('embedded-opentype'),
+         url('fonts/EthiopiaJiretSlant.woff') format('woff'),
+         url('fonts/EthiopiaJiretSlant.ttf') format('truetype'),
+         url('fonts/EthiopiaJiretSlant.svg#EthiopiaJiretSlant') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.geeztext{
+    font-family: 'EthiopiaJiretSlant',Helvetica;
+}
+
+input,textarea
+{
+    font-family: 'EthiopiaJiretSlant',Helvetica;
+}

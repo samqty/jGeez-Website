@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'EthiopicYebse';
+    src: url('fonts/EthiopicYebse.eot');
+    src: url('fonts/EthiopicYebse.eot?#iefix') format('embedded-opentype'),
+         url('fonts/EthiopicYebse.woff') format('woff'),
+         url('fonts/EthiopicYebse.ttf') format('truetype'),
+         url('fonts/EthiopicYebse.svg#EthiopicYebse') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.geeztext{
+    font-family: 'EthiopicYebse',Helvetica;
+}
+
+input,textarea
+{
+    font-family: 'EthiopicYebse',Helvetica;
+}

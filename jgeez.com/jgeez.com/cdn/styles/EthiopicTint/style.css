@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'EthiopicTint';
+    src: url('fonts/EthiopicTint.eot');
+    src: url('fonts/EthiopicTint.eot?#iefix') format('embedded-opentype'),
+         url('fonts/EthiopicTint.woff') format('woff'),
+         url('fonts/EthiopicTint.ttf') format('truetype'),
+         url('fonts/EthiopicTint.svg#EthiopicTint') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.geeztext{
+    font-family: 'EthiopicTint',Helvetica;
+}
+
+input,textarea
+{
+    font-family: 'EthiopicTint',Helvetica;
+}

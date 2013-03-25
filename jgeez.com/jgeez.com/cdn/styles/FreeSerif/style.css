@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'FreeSerif';
+    src: url('fonts/FreeSerif.eot');
+    src: url('fonts/FreeSerif.eot?#iefix') format('embedded-opentype'),
+         url('fonts/FreeSerif.woff') format('woff'),
+         url('fonts/FreeSerif.ttf') format('truetype'),
+         url('fonts/FreeSerif.svg#FreeSerif') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.geeztext{
+    font-family: 'FreeSerif',Helvetica;
+}
+
+input,textarea
+{
+    font-family: 'FreeSerif',Helvetica;
+}

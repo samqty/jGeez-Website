@@ -1,0 +1,599 @@
+﻿@{
+    ViewBag.Title = "DevelopersGuide";
+}
+@section header{
+    <style type="text/css">
+        .stepcontainer
+        {
+            margin: 8px;
+            min-height: 65px;
+            clear: both;
+        }
+        
+        .stepcaption
+        {
+            float: left;
+            width: 72px;
+            background-color: #333333;
+            color: White;
+            padding: 2px;
+            margin-right: 3px;
+        }
+        
+        .stepdescription
+        {
+            float: left;
+            width: 800px;
+            line-height: 18px;
+        }
+        
+        .stepcaptionlabel
+        {
+            float: left;
+            font-size: 11px;
+            color: silver;
+        }
+        
+        .stepcaptionnumber
+        {
+            font-size: 60px;
+            font-weight: bold;
+            float: left;
+            line-height: 55px;
+            margin-top:3px;
+        }
+        
+        .column
+        {
+            float:left;
+            width:150px;
+        }
+        .row
+        {
+            width:900px;
+            clear:both;
+            margin-left:10px;
+            border-bottom:1px solid #F3F3F3;
+        }
+        .description
+        {
+            width:400px;
+        }
+        .header
+        {
+            font-weight:bold;
+        }
+        h3.remarks 
+        {
+            margin-left:25px;
+            text-transform:uppercase;
+        }
+        .remarks
+        {
+            margin-left:45px;
+            list-style-type:square;
+        }
+        .fontname {
+            display:block;
+            width:280px;
+            height:30px;
+            font-weight:bold;
+            background-position:180px 3px;
+            line-height:30px;
+            vertical-align:middle;
+            border-bottom:1px dotted silver;
+            background-repeat:no-repeat;
+        }
+    </style>
+}
+@section body{
+
+    <div class="onecolumn">
+         <h1>Developers Guide</h1>
+        <ul class="toc">
+            <li><a href="#ExpressImplementation">Express Implementation(using attributes only)</a></li>
+            <li><a href="#QuickImplementation"</a>Quick Implementation(using jquery)</li>
+            <li><a href="#Library Reference">Library Reference</a></li>
+            <li><a href="#changingoptions">Changing options with your javascript</a></li>
+            <li><a href="#reattach">Re-Attaching jGeez events</a></li>
+            <li><a href="#attributeimplimentation">Implementation by Attribute</a></li>
+            <li><a href="#jgeezattribute">jGeez Attributes Reference</a></li>
+            <li><a href="#prevversion">Using previous version of jGeez</a></li>
+        </ul>
+
+        <h1>
+            <a name="ExpressImplementation"></a>
+            Express Implementation</h1>
+        <p>
+            Along with the release of a newer version of jGeez I have implemented "attribute driven implementation" 
+            to users who are not well versed with javascript, jquery or even CSS. Although I strongly recommend that
+            you learn these technologies as they are the backbone of web development, I have decided to make things
+            much more simpler and so much easier for implementation with attributes.
+        </p>
+        <div class="stepcontainer">
+            <div class="stepcaption">
+                <div class="stepcaptionlabel">
+                    step</div>
+                <div class="stepcaptionnumber">
+                    1</div>
+            </div>
+            <div class="stepdescription">
+                <strong>add this code to the header section of your code</strong>
+                <br />
+                 <div class="sample_code">
+                    &lt;script type=&quot;text/javascript&quot;  src=<span class="blue">&quot;http://code.jquery.com/jquery-1.7.2.min.js&quot;</span>&gt;&lt;/script&gt; 
+                    <br />
+                    &lt;script mode=&quot;auto&quot;  type=&quot;text/javascript&quot; src=<span class="blue">&quot;http://www.jgeez.com/cdn/jquery.jgeez.min.js&quot;</span>&gt;&lt;/script&gt;
+                    <br />
+                </div>
+            </div>
+        </div>
+        <div class="stepcontainer">
+            <div class="stepcaption">
+                <div class="stepcaptionlabel">
+                    step</div>
+                <div class="stepcaptionnumber">
+                    2</div>
+            </div>
+            <div class="stepdescription">
+                <strong>That is it</strong>
+                <br />
+                <span> this code points directly to the latest version of both dependencies (jquery & jGeez) on 
+                the respective share public server alliviating the need for hosting them on you server. this implementation
+                assumes that all the inputs (textboxes and textareas) are potential geez inputs and automatically
+                adds geez typing feature on them.
+                <br />
+                <i> to further understand how to control which inputs need geez feature and the overall attribute driven implementation 
+                please refer to "<a href="#attributeimplimentation"> Implementation By Attributes</a>" section of this developer guide.</i>
+                </span>
+            </div>
+        </div>
+        <br class="reset" />
+    </div>
+    
+    <div class="onecolumn">
+        <a name="QuickImplementation"></a>
+        <h1>
+            Quick Implementation</h1>
+        <p>
+            In order to use this javascript library, you should have a basic understanding of
+            HTML, CSS and javascript. If you don’t, I suggest you read a little about these
+            awesome technologies. I shall proceed with the assumption that you have spent a
+            little time with the technologies mentioned above.
+        </p>
+        <div class="stepcontainer">
+            <div class="stepcaption">
+                <div class="stepcaptionlabel">
+                    step</div>
+                <div class="stepcaptionnumber">
+                    1</div>
+            </div>
+            <div class="stepdescription">
+                <strong>Download the latest version of the Library from here, or our downloads page</strong>
+                <br />
+                <span>you have a choice to use either the minified and compressed version for performance,
+                    but if you like to do some development work on it, you can download the development
+                    version from our downloads page </span>
+            </div>
+        </div>
+        <div class="stepcontainer">
+            <div class="stepcaption">
+                <div class="stepcaptionlabel">
+                    step</div>
+                <div class="stepcaptionnumber">
+                    2</div>
+            </div>
+            <div class="stepdescription">
+                <strong>Extract and copy the contents to your root folder</strong>
+                <br />
+                <span>The library package download contains a folder named "jGeez" it contains one folder
+                    and four files
+                    <br />
+                    <b><i>font</i></b> : contains the geez fonts required for different devices
+                    <br />
+                    <b><i>style.css</i></b> : defines the style to include geez font in the HTML structure
+                    <br />
+                    <b><i>jquery.jgeez.js</i></b> : contains the core library that enable users to type
+                    geez
+                    <br />
+                    <b><i>jquery-1.7.1.min.js</i></b> : is required javascript library that is used
+                    by jGeez plugin, if you are already using jquery in your web application there is
+                    no need for you to include this file
+                    <br />
+                    <b><i>readme.txt</i></b> : re-iterates the quick implementation steps and terms
+                    of use for this library </span>
+                <br />
+                Copy this folder to the root directory of your web application
+            </div>
+        </div>
+        <div class="stepcontainer">
+            <div class="stepcaption">
+                <div class="stepcaptionlabel">
+                    step</div>
+                <div class="stepcaptionnumber">
+                    3</div>
+            </div>
+            <div class="stepdescription">
+                <strong>Add reference to the library and styles in your webpages</strong>
+                <br />
+                add the following code to the header section of the webpage you are trying to add
+                geez typing on
+                <div class="sample_code">
+                    &lt;script type=&quot;text/javascript&quot; src=<span class="blue">&quot;jgeez&nbsp/jquery-1.7.1.min.js&quot;</span>&gt;&lt;/script&gt;<span
+                        style="color: Gray;">//optional if you already use jquery library</span>
+                    <br />
+                    &lt;script type=&quot;text/javascript&quot; src=<span class="blue">&quot;jgeez&nbsp/&nbspjquery.jgeez.js&quot;</span>&gt;&lt;/script&gt;
+                    <br />
+                    &lt;link type=&quot;text/css&quot; rel=&quot;Stylesheet&quot; href=<span class="blue">&quot;jgeez&nbsp/&nbsp
+                        style.css&quot;</span> /&gt;
+                </div>
+            </div>
+            <br class="reset" />
+        </div>
+        <div class="stepcontainer">
+            <div class="stepcaption">
+                <div class="stepcaptionlabel">
+                    step</div>
+                <div class="stepcaptionnumber">
+                    4</div>
+            </div>
+            <div class="stepdescription">
+                <strong>Add javascript code to apply the plugin</strong>
+                <br />
+                add the following code right below the above code in your header section to activate geez typing on your textbox
+                <div class="sample_code">
+                    &lt;script type=&quot;text/javascript&quot;&gt;
+                    <br />
+                    &nbsp;&nbsp;&nbsp; <span class="green">$(document).ready(function () {
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $(&quot;#geeztextbox&quot;).jGeez();
+                        <span style="color: Gray;">//replace the &quot;geeztextbox&quot; with the id of the textbox you
+                            are adding geez typing on</span>
+                        <br />
+                        &nbsp;&nbsp;&nbsp; }); </span>
+                    <br />
+                    &lt;/script&gt;</div>
+            </div>
+            <br class="reset" />
+        </div>
+    </div>
+    
+    <div class="onecolumn"> <a name="LibraryReference"></a>
+        <h1>
+            Library Reference</h1>
+        <p>
+            Plugin NameSpace: jGeez
+            <br /> Options helps you to change how the library behaves pariculary in reference 
+            to enabling and disabling geez typing in a text box, to change options on this plugin
+            use the following code format.
+        </p>
+        <div class="sample_code" style="width:870px;margin:5px;">
+            &lt;script type=&quot;text/javascript&quot;&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp; <span class="green">$(document).ready(function () {
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $(&quot;#geeztextbox&quot;).jGeez({'&lt;optionname&gt;':&lt;optionvalue&gt;});
+                <span style="color: Gray;">//provide the option name and value from the predefined options listed below</span>
+                <br />
+                &nbsp;&nbsp;&nbsp; }); </span>
+            <br />
+            &lt;/script&gt;</div>
+            <p> below are a list of all the options available for manuplation,
+            visit our samples page to see how these options are used in a live environment
+            </p>
+            <div class="row">
+                <div class="column header">option</div>
+                <div class="column header">data type</div>
+                <div class="column description header">Description</div>
+                <div class="column header">default value</div>
+            </div>
+            <div class="row">
+                <div class="column">enabled</div>
+                <div class="column">Boolean</div>
+                <div class="column description">enables/disables geez typing</div>
+                <div class="column">true</div>
+            </div>
+            <div class="row">
+                <div class="column">englishbutton</div>
+                <div class="column">String</div>
+                <div class="column description">the id of the button(any html element) that is used to disable geez typing and return to english typing</div>
+                <div class="column">""</div>
+            </div>
+            <div class="row">
+                <div class="column">geezbutton</div>
+                <div class="column">String</div>
+                <div class="column description">the id of the button(any html element) that is used to enable geez typing </div>
+                <div class="column">""</div>
+            </div>
+            <div class="row">
+                <div class="column">showtogglebutton</div>
+                <div class="column">Boolean</div>
+                <div class="column description">show/hides the button used to toggle between english and geez writing mode</div>
+                <div class="column">true</div>
+            </div>
+             <div class="row">
+                <div class="column">helpbutton</div>
+                <div class="column">String</div>
+                <div class="column description">the id of the button(any html element) that will be used to link to the online help available at <a target="_blank" href="http://jgeez.com/home/help">jgeez.com/home/help</a> </div>
+                <div class="column">""</div>
+            </div>
+            <div class="row">
+                <div class="column">showhelpbutton</div>
+                <div class="column">Boolean</div>
+                <div class="column description">show/hides the button used to open the online geez typing help document<a target="_blank" href="http://jgeez.com/home/help">jgeez.com/home/help</a> </div>
+                <div class="column">true</div>
+            </div>
+            <div class="row">
+                <div class="column">toggleshortcut</div>
+                <div class="column">Char</div>
+                <div class="column description">a key that will be used in combination with ctrl key as a shortcut to enable and disable geez typing</div>
+                <div class="column">q</div>
+            </div>
+        <br class="reset" />
+        
+    </div>
+    
+    <div class="onecolumn">
+        <a name="changingoptions"></a>
+        <h1>Changing options with your javascript</h1>
+          <p>Once you have initialized the plugin on an input element, there might come a time where you wish to 
+          directly modify the options used to initialize the plugin. that is where the "changeoptions" method comes in. use the code sample
+          below to effectively change options on the plugin definition.
+          </p> 
+          <div class="sample_code" style="width:870px;margin:5px;">
+            &lt;script type=&quot;text/javascript&quot;&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp; <span class="green">$(document).ready(function () {
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $(&quot;#geeztextbox&quot;).jGeez('changeoptions',{'&lt;optionname&gt;':&lt;optionvalue&gt;});
+                <span style="color: Gray;">//provide the option name and value from the predefined options listed above</span>
+                <br />
+                &nbsp;&nbsp;&nbsp; }); </span>
+            <br />
+            &lt;/script&gt;</div>
+    </div>
+
+    <div class="onecolumn">
+        <a name="reattach"></a>
+        <h1>Re-Attaching jGeez events</h1>
+          <p>During the full life span of a page, there are times when you might need to restructure your DOM (document object model) 
+          . It might be to animate you divs or show html driven popup dialog boxes but those actions will disrupt the HTML structure of your page, there by causing the events attached on those elements to vanish
+          into thin air.
+          in this circumstances apply jgeez again on the element would create multiple toggle buttons and 
+          just breaks the flow of jGeez. use the following code to reattach events to your jGeez plugin
+          </p> 
+          <div class="sample_code" style="width:870px;margin:5px;">
+            &lt;script type=&quot;text/javascript&quot;&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp; <span class="green">$(document).ready(function () {
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: Gray;">//add this snippit after the code that resturcture your DOM in click events or functions</span>
+                <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $(&quot;#geeztextbox
+                &quot;).jGeez('reattachevents');
+                <br />
+                &nbsp;&nbsp;&nbsp; }); </span>
+            <br />
+            &lt;/script&gt;</div>
+            <h3 class="remarks">remarks</h3>
+            <ul class="remarks">
+                <li>this function only works after jgeez plugin is applied on an element</li>
+                <li>there is no need to check if the event is already attached, this function does that work before attaching more events</li>
+                <li>there is no need to call this method for ajax calls since jGeez by default attempts to reattach
+                events after every ajax call</li>
+            </ul>
+    </div>
+
+
+    <div class="onecolumn">
+        <h1><a name="attributeimplimentation" /> Implementation by Attribute</h1>
+        <p>
+            One of the main features introduced from the release of jGeez 1.1.0.0 is using Attributes of html elements 
+            to control the behaviour of jGeez on our developments. Just to start of I want to limit the definition of Attribute as below
+            to avoid confusion with the diverse meaning for the word "attribute"
+        </p> 
+
+        <p>
+            <b>Attribute of an element </b> : is a name value pair separtated by "=" and written within the start tag of an element.common example of a typical
+            attribute use is like :<br /> 
+            
+            
+        </p>
+            <div class="sample_code" style="width:870px;margin:5px;">
+                    <span class="green">&ltimg src=&quotphoto.png&quot /&gt </span> 
+            </div>
+        <p>
+            in which <b>src</b> is the attribute and <b>photo.png</b>  is the value
+        </p>
+
+        <p>
+            So in jGeez you can use custom attributes on elements to define geez behaviours on input elements, labels and even the overall behaviour of how deep the 
+            library is going to integrate it self into your web application. these custom attributes are detailed in the coming sections with 
+            example for each of the elements you can apply attributes to.
+        </p>
+
+        <p>
+            with this simplicity comes some limitations to using this library, although not significant enough it
+            is worth mentioning this remarks when walking down the "implementation by attribute" feature:
+        </p>
+         <ul class="remarks">
+                <li>you can not change options using attributes once the library is fully loaded on the client browser</li>
+                <li>since the library and style info is online, this library would only work when the user is online.
+                    you will have to disable the attribute implementation and follow the quick implementation to use the library off line or on an 
+                    intranet environment
+                </li>
+         </ul>
+    </div>
+
+    <div class="onecolumn">
+        <a name="jgeezattribute"></a>
+        <h1>
+            jGeez Attributes Reference</h1>
+            <p>
+            <b style="text-decoration:underline;">1)Library Attributes </b> 
+            <br />
+            <b>valid elements</b> <span class="blue"> &lt;script ... /&gt; </span> 
+            <br />
+            these attributes control the overall behaviour or the library
+            <br />
+        </p>
+            <div class="row">
+                <div class="column header">attribute</div>
+                <div class="column header">data type</div>
+                <div class="column description header">Description</div>
+                <div class="column header">default value</div>
+            </div>
+            <div class="row">
+                <div class="column">jgeez-mode</div>
+                <div class="column">string</div>
+                <div class="column description">defines which features to enable on the library
+                    <br />possible values are :
+                    <br /><b>auto</b>: with this value jGeez tries to detect if the user has
+                    geez unicode font installed and download the appropriate font if the user doesn't have any.
+                    jGeez will go through the page and tries to find any input elements that might require geez typing
+                    (if not disabled by the appropriate attribute jGeez assumes that all input elements require geez typing), and 
+                    automatically adds toggle button and help button on them.
+                    <br /><b>manual</b>: with this value jGeez performs font/unicode detection like the auto attribute
+                    but leaves developers to implement the geez typing in any shape or form they wish. use this option if you wish to 
+                    control how the user toggles languages (custom buttons and all the good stuff from the previous version of jGeez)
+                </div>
+                <div class="column">manual</div>
+            </div>
+        <div class="row">
+                <div class="column">jgeez-font</div>
+                <div class="column">string</div>
+                <div class="column description">defines which font to use on the page, if this value is set,
+                    jgeez will download the appropriate font regardless of the existence of a geez font on the client website
+                    <br />possible values are :
+                    <br />
+                <span class="fontname" style="background-image:url('../../Content/themes/base/images/fontsamples/AbyssinicaSIL.png');">AbyssinicaSIL</span>
+                <span class="fontname" style="background-image:url('../../Content/themes/base/images/fontsamples/EthiopiaJiretSlant.png');">EthiopiaJiretSlant</span>
+                <span class="fontname" style="background-image:url('../../Content/themes/base/images/fontsamples/EthiopicFantuwua.png');">EthiopicFantuwua</span>
+                <span class="fontname" style="background-image:url('../../Content/themes/base/images/fontsamples/EthiopicHiwua.png');">EthiopicHiwua</span>
+                <span class="fontname" style="background-image:url('../../Content/themes/base/images/fontsamples/EthiopicTint.png');">EthiopicTint</span>
+                <span class="fontname" style="background-image:url('../../Content/themes/base/images/fontsamples/Ethiopiawshrabold.png');">EthiopicWashRaBoldSlant</span>
+                <span class="fontname" style="background-image:url('../../Content/themes/base/images/fontsamples/Ethiopia WashRa SemiBold.png');">EthiopicWashRaSemiBold</span>
+                <span class="fontname" style="background-image:url('../../Content/themes/base/images/fontsamples/Ethiopic Wookianos.png');">EthiopicWookianos</span>
+                <span class="fontname" style="background-image:url('../../Content/themes/base/images/fontsamples/Ethiopic Yebse.png');">EthiopicYebse</span>
+                <span class="fontname" style="background-image:url('../../Content/themes/base/images/fontsamples/Ethiopic Yigezu Bisrat Goffer.png');">EthiopicYigezuBisratGoffer</span>
+                <span class="fontname" style="background-image:url('../../Content/themes/base/images/fontsamples/Free Serif.png');">FreeSerif</span>
+                    <br />
+                    *the compiled list of fonts courtecy of Eyasu Kifle from <a href="http://www.ethiopictype.com/" target="_blank">http://www.ethiopictype.com/</a>
+                </div>
+                <div class="column">EthiopiaJiretSlant</div>
+            </div>
+            <br class="reset" />
+            <p>
+               <b> Example</b>
+            </p>
+            <div class="sample_code" style="width:870px;margin:5px;">
+                &lt;script jgeez-mode=&quot;auto&quot;  type=&quot;text/javascript&quot;  src=<span class="blue">&quot;http://code.jquery.com/jquery-1.7.2.min.js&quot;</span>&gt;&lt;/script&gt; 
+            </div>
+        <br class="reset" />
+
+        <p>
+            <b style="text-decoration:underline;">2)Input Attributes </b> 
+            <br />
+            <b>valid elements</b> <span class="blue"> &lt;input... /&gt; </span>,<span class="blue"> &lt;textarea ... /&gt; </span> 
+            <br />
+            these attributes controls the geez typing plugin status on input elements.
+            <br />
+        </p>
+            <div class="row">
+                <div class="column header">option</div>
+                <div class="column header">data type</div>
+                <div class="column description header">Description</div>
+                <div class="column header">default value</div>
+            </div>
+            <div class="row">
+                <div class="column">jgeez-enabled</div>
+                <div class="column">Boolean</div>
+                <div class="column description">enables/disables geez typing</div>
+                <div class="column">true</div>
+            </div>
+            <div class="row">
+                <div class="column">jgeez-englishbutton</div>
+                <div class="column">String</div>
+                <div class="column description">the id of the button(any html element) that is used to disable geez typing and return to english typing</div>
+                <div class="column">""</div>
+            </div>
+            <div class="row">
+                <div class="column">jgeez-geezbutton</div>
+                <div class="column">String</div>
+                <div class="column description">the id of the button(any html element) that is used to enable geez typing </div>
+                <div class="column">""</div>
+            </div>
+            <div class="row">
+                <div class="column">jgeez-showtogglebutton</div>
+                <div class="column">Boolean</div>
+                <div class="column description">show/hides the button used to toggle between english and geez writing mode</div>
+                <div class="column">true</div>
+            </div>
+             <div class="row">
+                <div class="column">jgeez-helpbutton</div>
+                <div class="column">String</div>
+                <div class="column description">the id of the button(any html element) that will be used to link to the online help available at <a target="_blank" href="http://jgeez.com/home/help">jgeez.com/home/help</a> </div>
+                <div class="column">""</div>
+            </div>
+            <div class="row">
+                <div class="column">jgeez-showhelpbutton</div>
+                <div class="column">Boolean</div>
+                <div class="column description">show/hides the button used to open the online geez typing help document<a target="_blank" href="http://jgeez.com/home/help">jgeez.com/home/help</a> </div>
+                <div class="column">true</div>
+            </div>
+            <div class="row">
+                <div class="column">jgeez-toggleshortcut</div>
+                <div class="column">Char</div>
+                <div class="column description">a key that will be used in combination with ctrl key as a shortcut to enable and disable geez typing</div>
+                <div class="column">q</div>
+            </div>
+        <br class="reset" />
+            <p>
+               <b> Example#1</b> a Markup for a textarea with both the toggle button and help button hidden
+            </p>
+            <div class="sample_code" style="width:870px;margin:5px;">
+                &lt;textarea jgeez-showtogglebutton=&quot;false&quot; jgeez-showhelpbutton=&quot;false&quot; &gt;&lt;/textarea&gt;
+            </div>
+
+            <p>
+               <b> Example#2</b> a Markup for a single line input with the toggle button visible and help button hidden
+            </p>
+            <div class="sample_code" style="width:870px;margin:5px;">
+                &lt;input type=&quot;text&quot; jgeez-showtogglebutton=&quot;true&quot; jgeez-showhelpbutton=&quot;false&quot; &gt;&lt;/input&gt;
+            </div>
+        
+    </div>
+
+    <div class="onecolumn">
+        <a name="prevversion"></a>
+        <h1>Using previous versions of jgeez</h1>
+        <p>
+            In most cases when a new version of jgeez is released, we make a regression testing to make sure that the new library
+            is backward compatible to the earlier implementations. But as it always happens new releases are very vulnerable to bugs
+            and unpredictable behaviours in older implementations. So when you make migrations to newer version of jgeez and God forbid :) run
+            into bugs you can always refer to the earlier version of the library availble on our servers while we make hot fixes to the issues.
+        </p>
+        <p>
+            all the version of jgeez are available on our server in the following format:
+            <b>
+                <br />
+                <br />
+                http://www.jgeez.com/cdn/jquery.jgeez-<i>&lt;x.x.x.x&gt;</i>.js
+            </b>
+            <br />
+            where the x.x.x.x is the version number you are looking for. For example if you are looking for the first release of jgeez
+            you can replace the x.x.x.x with 1.0.0.0 and the link address would be             
+            http://www.jgeez.com/cdn/jquery.jgeez-1.0.0.0.js
+        </p>
+        <p>
+            As a side note, if you ever run into any issues with jgeez product, please info us so that we can resolve it as soon as possible.
+        </p>
+    </div>
+
+    <div class="onecolumn">
+        <h1><a href="http://forum.jgeez.com/">Visit our forum for more</a> </h1>
+           <p>If you happen to have any questions or issues while trying to implement this library,
+            <a href="http://forum.jgeez.com/">please use our forum to submit </a> your inquiries and browse through others' experiences
+            </p> 
+            
+    </div>
+}

@@ -1,0 +1,136 @@
+﻿<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sample4tabs").tabs();
+        //$("#commenttextbox2").jGeez();
+        $("#geezfancy").addClass("fancychecked");
+
+        $("#geezfancy").click(function () {
+            if (!$(this).hasClass("fancychecked")) {
+                $(".fancychecked").removeClass("fancychecked");
+                $(this).addClass("fancychecked");
+                $("#commenttextbox2").jGeez("changeoptions", { "enabled": true });
+                $("#commenttextbox2").focus();
+            }
+        });
+        $("#englishfancy").click(function () {
+            if (!$(this).hasClass("fancychecked")) {
+                $(".fancychecked").removeClass("fancychecked");
+                $(this).addClass("fancychecked");
+                $("#commenttextbox2").jGeez("changeoptions", { "enabled": false });
+                $("#commenttextbox2").focus();
+            }
+        });
+    });
+</script>
+
+<div id="sample4tabs" class="tabs-bottom">
+    <ul>
+		<li><a href="#sample4tabs-1">Demo</a></li>
+		<li><a href="#sample4tabs-2">Code</a></li>
+	</ul>
+    <div id="sample4tabs-1">
+        <div style="float: left; width: 400px;">
+            <p class="comment">
+               Leave us a comment / <span class="geeztext">አስተያየት ይተዉልን</span> </p>
+            <textarea id="commenttextbox2" class="geeztext" rows="5" style="width: 250px;float:left;"
+            jgeez-showtogglebutton="false"
+            jgeez-showhelpbutton="false" >
+            </textarea>
+            <div style="margin-left: 5px; width: 90px;float:left;">
+                <a id="geezfancy" class="geeztext fancyradio" style="float: left;">አማርኛ</a> 
+                <a id="englishfancy" class="fancyradio" style="float: left;">English</a> 
+                    <a class="button" style="float: left;width:60px;">
+                        submit</a>
+            </div>
+        </div>
+        <div style="float: left; width: 450px;">
+        <p class="information">
+            you can format the english/geez button any way you like but make sure to let the
+            plugin know which button to use when toggling between those two modes. It is worth mentioning
+            also that the input area does not lose focus when changing modes of typing ... to further
+            understand what is going on behide the seen click on the Code tab to view the actual javascript code used.
+        </p>
+        </div>
+        <br class="reset" />
+    </div>
+    <div id="sample4tabs-2">
+        <div class="codeblock">
+        &lt;script type=&quot;text/javascript&quot;&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; $(document).ready(function () {
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(&quot;#sample4tabs&quot;).tabs();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(&quot;#geezfancy&quot;).addClass(&quot;fancychecked&quot;);
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(&quot;#geezfancy&quot;).click(function () {
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if 
+        (!$(this).hasClass(&quot;fancychecked&quot;)) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        $(&quot;.fancychecked&quot;).removeClass(&quot;fancychecked&quot;);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        $(this).addClass(&quot;fancychecked&quot;);
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        $(&quot;#commenttextbox2&quot;).jGeez(&quot;changeoptions&quot;, { &quot;enabled&quot;: true });
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        $(&quot;#commenttextbox2&quot;).focus();
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } });
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $(&quot;#englishfancy&quot;).click(function () {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if 
+        (!$(this).hasClass(&quot;fancychecked&quot;)) {
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        $(&quot;.fancychecked&quot;).removeClass(&quot;fancychecked&quot;);
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        $(this).addClass(&quot;fancychecked&quot;);
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        $(&quot;#commenttextbox2&quot;).jGeez(&quot;changeoptions&quot;, { &quot;enabled&quot;: false }); 
+        $(&quot;#commenttextbox2&quot;).focus();
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } });
+        <br />
+&nbsp;&nbsp;&nbsp; });<br />
+&nbsp;&lt;/script&gt;
+
+<br />
+<br />
+<br />
+
+&lt;div style=&quot;float: left; width: 400px;&quot;&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;p class=&quot;comment&quot;&gt; Leave us a comment / &lt;span 
+        class=&quot;geeztext&quot;&gt;አስተያየት ይተዉልን&lt;/span&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;/p&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;textarea id=&quot;commenttextbox2&quot; class=&quot;geeztext&quot; rows=&quot;5&quot; 
+        style=&quot;width: 250px;float:left;&quot;
+        <br />
+&nbsp;&nbsp;&nbsp; jgeez-showtogglebutton=&quot;false&quot; jgeez-showhelpbutton=&quot;false&quot; &gt; 
+        &lt;/textarea&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;div style=&quot;margin-left: 5px; width: 90px;float:left;&quot;&gt;
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a id=&quot;geezfancy&quot; class=&quot;geeztext fancyradio&quot; 
+        style=&quot;float: left;&quot;&gt;አማርኛ&lt;/a&gt;
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a id=&quot;englishfancy&quot; class=&quot;fancyradio&quot; 
+        style=&quot;float: left;&quot;&gt;English&lt;/a&gt;
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a class=&quot;button&quot; style=&quot;float: 
+        left;width:60px;&quot;&gt; submit&lt;/a&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+        <br />
+        &lt;/div&gt;
+
+</p>
+        </div>
+    </div>
+</div>

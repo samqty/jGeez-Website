@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'EthiopicWashRaSemiBold';
+    src: url('fonts/EthiopicWashRaSemiBold.eot');
+    src: url('fonts/EthiopicWashRaSemiBold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/EthiopicWashRaSemiBold.woff') format('woff'),
+         url('fonts/EthiopicWashRaSemiBold.ttf') format('truetype'),
+         url('fonts/EthiopicWashRaSemiBold.svg#EthiopicWashRaSemiBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.geeztext{
+    font-family: 'EthiopicWashRaSemiBold',Helvetica;
+}
+
+input,textarea
+{
+    font-family: 'EthiopicWashRaSemiBold',Helvetica;
+}

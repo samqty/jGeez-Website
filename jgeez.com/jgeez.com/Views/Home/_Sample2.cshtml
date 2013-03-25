@@ -1,0 +1,86 @@
+﻿<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sample2tabs").tabs();
+        /*$("#firstnametxt").jGeez(
+        {
+            'englishbutton': 'firstnameenglishtoggle',
+            'geezbutton': 'firstnamegeeztoggle'
+        });
+        $("#middlenametxt").jGeez(
+        {
+            'englishbutton': 'middlenameenglishtoggle',
+            'geezbutton': 'middlenamegeeztoggle'
+        });
+        $("#lastnametxt").jGeez(
+        {
+            'englishbutton': 'lastnameenglishtoggle',
+            'geezbutton': 'lastnamegeeztoggle'
+        });*/
+    });
+</script>
+<div id="sample2tabs" class="tabs-bottom">
+    <ul>
+		<li><a href="#sample2tabs-1">Demo</a></li>
+		<li><a href="#sample2tabs-2">Code</a></li>
+	</ul>
+    <div id="sample2tabs-1" >
+    <fieldset title="Personal Information" style="width:330px;float:left; margin-right:47px;">
+        <legend>Personal Information / <span class="geeztext">የግል መረጃ</span></legend>
+        <div>
+            First Name/<span class="geeztext">የመጀመሪያ ሥም</span>
+        </div>
+        <div>
+            <input id="firstnametxt" type="text" jgeez-showhelpbutton="false"/>
+            
+        </div>
+        <div>
+            Father's Name/<span class="geeztext">ያአባት ሥም</span>
+        </div>
+        <div>
+            <input id="middlenametxt" type="text" jgeez-showhelpbutton="false"/>
+        </div>
+        <div>
+            Last Name/<span class="geeztext">የአያት ሥም</span>
+        </div>
+        <div>
+            <input id="lastnametxt" type="text" jgeez-showhelpbutton="false" />
+        </div>
+        <a class="smallbutton" style="margin-top:10px;margin-right:28px; float:right;">submit</a>
+    </fieldset>
+    <div style="float: left; width: 450px;">
+        <p class="information">
+           In addition to large text areas for comments and body of content, you can use this plugin to stick
+           an individual toggle button per text box if you are foreseeing users enter mixed content to your 
+           data entry page. each of these text boxes are handled independently by the plugin and gives more control
+           to the person typing information (this might not be the best example of its use:))
+        </p>
+        </div>
+        <br class="reset" />
+    </div>
+    <div id="sample2tabs-2">
+        <div class="codeblock">
+        &lt;fieldset title=&quot;Personal Information&quot; style=&quot;width:330px;float:left; 
+        margin-right:47px;&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;legend&gt;Personal Information / &lt;span class=&quot;geeztext&quot;&gt;የግል 
+        መረጃ&lt;/span&gt;&lt;/legend&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;div&gt; First Name/&lt;span class=&quot;geeztext&quot;&gt;የመጀመሪያ ሥም&lt;/span&gt; &lt;/div&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;div&gt; &lt;input id=&quot;firstnametxt&quot; type=&quot;text&quot; 
+        jgeez-showhelpbutton=&quot;false&quot;/&gt; &lt;/div&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;div&gt; Father&#39;s Name/&lt;span class=&quot;geeztext&quot;&gt;ያአባት ሥም&lt;/span&gt; &lt;/div&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;div&gt; &lt;input id=&quot;middlenametxt&quot; type=&quot;text&quot; 
+        jgeez-showhelpbutton=&quot;false&quot;/&gt; &lt;/div&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;div&gt; Last Name/&lt;span class=&quot;geeztext&quot;&gt;የአያት ሥም&lt;/span&gt; &lt;/div&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;div&gt; &lt;input id=&quot;lastnametxt&quot; type=&quot;text&quot; 
+        jgeez-showhelpbutton=&quot;false&quot; /&gt; &lt;/div&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;a class=&quot;smallbutton&quot; style=&quot;margin-top:10px;margin-right:28px; 
+        float:right;&quot;&gt;submit&lt;/a&gt;<br />
+        &lt;/fieldset&gt;
+        </div>
+    </div>
+</div>

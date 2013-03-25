@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'AbyssinicaSIL';
+    src: url('fonts/AbyssinicaSIL.eot');
+    src: url('fonts/AbyssinicaSIL.eot?#iefix') format('embedded-opentype'),
+         url('fonts/AbyssinicaSIL.woff') format('woff'),
+         url('fonts/AbyssinicaSIL.ttf') format('truetype'),
+         url('fonts/AbyssinicaSIL.svg#AbyssinicaSIL') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.geeztext{
+    font-family: 'AbyssinicaSIL',Helvetica;
+}
+
+input,textarea
+{
+    font-family: 'AbyssinicaSIL',Helvetica;
+}

@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Samples";
+}
+
+@section header
+{
+    <link href="../../Content/themes/base/jquery.ui.tabs.css" rel="stylesheet" type="text/css" />
+    <link href="../../Samples/style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .sample{background-position:0px -128px;}
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("textarea").html(""); 
+        });
+    </script>
+}
+
+@section body
+{
+    <div class="onecolumn">
+        <h1>Samples</h1>
+        <ul class="toc">
+            <li><a href="#sample1">Sample 1: Geez/English Toggle Button</a></li>
+            <li><a href="#sample2">Sample 2: Data entry with small Geez/English Toggle</a></li>
+            <li><a href="#sample3">[New]Sample 3: Changing the font used</a></li>
+            <li><a href="#sample4">Sample 4: Chat app with keyboard short cut Geez/English Toggle</a></li>
+            <li><a href="#sample5">Sample 5: Web app with a custom toggle Geez/English Toggle</a></li>
+        </ul>
+        
+        <h2 class="sample"><a name="sample1"></a>Sample 1: Geez/English Toggle Button</h2>
+        <div style="margin-left:10px;margin-right:10px;margin-bottom:10px;">
+        @Html.Partial("_Sample1")
+        </div>
+
+        <h2 class="sample"><a name="sample2"></a>Sample 2: Data entry with small Geez/English Toggle</h2>
+        <div style="margin-left:10px;margin-right:10px;margin-bottom:10px;">
+        @Html.Partial("_Sample2")
+        </div>
+
+        <h2 class="sample"><a name="sample3"></a>Sample 3: Changing the font used</h2>
+        <div style="margin-left:10px;margin-right:10px;margin-bottom:10px;">
+        @Html.Partial("_Sample5")
+        </div>
+
+        <h2 class="sample"><a name="sample4"></a>Sample 4: Chat app with keyboard short cut Geez/English Toggle</h2>
+        <div style="margin-left:10px;margin-right:10px;margin-bottom:10px;">
+        @Html.Partial("_Sample3")
+        </div>
+
+         <h2 class="sample"><a name="sample5"></a>Sample 5: Web app with a custom toggle Geez/English Toggle</h2>
+        <div style="margin-left:10px;margin-right:10px;margin-bottom:10px;">
+        @Html.Partial("_Sample4")
+        </div>
+        
+    </div>
+}

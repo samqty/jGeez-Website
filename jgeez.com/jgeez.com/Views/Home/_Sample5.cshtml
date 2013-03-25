@@ -1,0 +1,88 @@
+﻿
+@{
+    var selectedfont = string.Empty;
+    
+    if(!string.IsNullOrEmpty(Request.QueryString["font"]))
+    {
+        selectedfont = Request.QueryString["font"];
+    }
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sample5tabs").tabs();
+
+        $("#fontdropdown").change(function () {
+            window.location = '/home/Samples/?font=' + $(this).val();
+        });
+
+        var sfont="@selectedfont";
+        if(sfont)
+        $("#fontdropdown").val(sfont);
+    });
+</script>
+
+<div id="sample5tabs" class="tabs-bottom">
+    <ul>
+		<li><a href="#sample5tabs-1">Demo</a></li>
+		<li><a href="#sample5tabs-2">Code</a></li>
+	</ul>
+    <div id="sample5tabs-1">
+        <div style="float: left; width: 400px;">
+           Select a font : 
+           <select id="fontdropdown">
+                <option value="AbyssinicaSIL">AbyssinicaSIL</option>
+                <option value="EthiopiaJiretSlant">EthiopiaJiretSlant</option>
+                <option value="EthiopicFantuwua">EthiopicFantuwua</option>
+                <option value="EthiopicHiwua">EthiopicHiwua</option>
+                <option value="EthiopicTint">EthiopicTint</option>
+                <option value="EthiopicWashRaBoldSlant">EthiopicWashRaBoldSlant</option>
+                <option value="EthiopicWashRaSemiBold">EthiopicWashRaSemiBold</option>
+                <option value="EthiopicWookianos">EthiopicWookianos</option>
+                <option value="EthiopicYebse">EthiopicYebse</option>
+                <option value="EthiopicYigezuBisratGoffer">EthiopicYigezuBisratGoffer</option>
+                <option value="FreeSerif">FreeSerif</option>
+           </select>
+           <br />
+           <p class="geeztext" style="border: 1px dotted silver; padding:5px; text-align:center;font-size:22px;">
+           አበበ በሶ በላ:: ጫላ ጩቤ ጨበጠ::
+           </p>
+        </div>
+        <div style="float: left; width: 450px;">
+        <p class="information">
+            
+            use attributes on the jgeez library script refernce to change the font to be used. you can refer 
+            to the developer's guide page found <a href="@Url.Action("DevelopersGuide")"> here </a>to find the list of all the fonts available for use.
+        </p>
+        </div>
+        <br class="reset" />
+    </div>
+    <div id="sample5tabs-2">
+        <div class="codeblock">
+        //since this is a library level setting the code for this sample resides on the server where
+            <br />
+            //the serverisde code changes the attributes applied on the library. 
+            <br />
+            //for your reference the code on asp.net MVC looks like this
+            <br /><br />
+        $(document).ready(function () {
+            <br />
+        $("#sample5tabs").tabs();
+            <br />
+        $("#fontdropdown").change(function () {
+            <br />
+            window.location = '/home/Samples/?font=' + $(this).val();
+            <br />
+        });
+            <br />
+        var sfont="@selectedfont";
+            <br />
+        if(sfont)
+            <br />
+        $("#fontdropdown").val(sfont);
+            <br />
+    });
+            <br />
+        </div>
+    </div>
+</div>

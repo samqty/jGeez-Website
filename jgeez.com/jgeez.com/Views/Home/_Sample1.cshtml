@@ -1,0 +1,66 @@
+﻿<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sample1tabs").tabs();
+    });
+</script>
+
+<div id="sample1tabs" class="tabs-bottom">
+    <ul>
+		<li><a href="#sample1tabs-1">Demo</a></li>
+		<li><a href="#sample1tabs-2">Code</a></li>
+	</ul>
+    <div id="sample1tabs-1">
+        <div style="float: left; width: 400px;">
+            <p class="comment">
+               Leave us a comment / <span class="geeztext">አስተያየት ይተዉልን</span> </p>
+            <textarea id="commenttextbox1" rows="5" style="width: 350px;" jgeez-englishbutton="englishplain" jgeez-geezbutton="geezplain">
+            </textarea>
+            <div style="margin-top: 5px; width: 355px;">
+                <a id="geezplain" class="button icon-button geeztext" style="float: left;">አማርኛ</a> <a id="englishplain"
+                    class="button icon-button" style="float: left;">English</a> <a class="button" style="float: right;">
+                        submit</a>
+            </div>
+        </div>
+        <div style="float: left; width: 450px;">
+        <p class="information">
+            you can format the english/geez button any way you like but make sure to let the
+            plugin know which button to use when toggling between those two modes. It is worth mentioning
+            also that the input area does not lose focus when changing modes of typing ... to further
+            understand what is going on behide the seen click on the Code tab to view the actual attributes used to achieve this.
+        </p>
+        </div>
+        <br class="reset" />
+    </div>
+    <div id="sample1tabs-2">
+        <div class="codeblock">
+          &lt;div style=&quot;float: left; width: 400px;&quot;&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;p class=&quot;comment&quot;&gt; Leave us a comment /
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span class=&quot;geeztext&quot;&gt;አስተያየት ይተዉልን&lt;/span&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;/p&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;textarea id=&quot;commenttextbox1&quot; rows=&quot;5&quot; style=&quot;width: 350px;&quot;
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jgeez-englishbutton=&quot;englishplain&quot;
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jgeez-geezbutton=&quot;geezplain&quot;&gt; &lt;/textarea&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;div style=&quot;margin-top: 5px; width: 355px;&quot;&gt;
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a id=&quot;geezplain&quot; class=&quot;button icon-button 
+        geeztext&quot; style=&quot;float: left;&quot;&gt;አማርኛ&lt;/a&gt;
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a id=&quot;englishplain&quot; class=&quot;button 
+        icon-button&quot; style=&quot;float: left;&quot;&gt;English&lt;/a&gt;
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a class=&quot;button&quot; style=&quot;float: right;&quot;&gt; 
+        submit&lt;/a&gt;
+        <br />
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+        <br />
+        &lt;/div&gt;  
+        </div>
+    </div>
+</div>

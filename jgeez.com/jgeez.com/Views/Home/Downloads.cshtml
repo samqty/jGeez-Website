@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "Downloads";
+}
+
+@section header 
+{
+    <style type="text/css">
+        .enhancement{background-position:0px -32px;}
+        .bugfix{background-position:0px -64px;}
+        .productinfo{background-position:0px -96px;}
+    </style>
+}
+
+@section body
+{
+    <div class="wide_left_column">
+        <h2 class="productinfo">Product Info</h2>
+        <p>- Version: jGeez 1.2.0.0</p>
+        <p>- Release Date: December 6, 2012</p>
+        <h2>New Features</h2>
+        <p>- Multiple font options, developers will be able to select the font the like to use with jgeez</p>
+        <h2 class="enhancement">Enhancements</h2>
+        <p>- New option for developers to reapply(reattach) the plugin events after a dom restructure occurs.</p>
+        <h2 class="bugfix">Bug Fixes</h2>
+        <p>- in previous versions, AJAX calls used to stop jgeez from working, that issue has been fixed and jgeez will reattach events
+        after any ajax call on the page</p>
+    </div>
+
+    
+
+    <div class="right_small_column">
+        <a class="downloadlink" target="_blank" href="@Url.Content("~/cdn/jquery.jgeez.min.js")">Download minified version (10kb)</a>
+        <a class="downloadlink" target="_blank" href="@Url.Content("~/cdn/jquery.jgeez.js")">Download development version</a>
+        <a class="downloadlink" target="_blank" href="@Url.Content("~/Downloads/Demo.zip")">Download all the demo files</a>
+        <a class="downloadlink" target="_blank" href="@Url.Content("~/Downloads/DesignDocumentation.pdf")">Download design documents</a>
+        <a class="downloadlink" target="_blank" href="@Url.Content("~/Downloads/geezhelp.pdf")">Download help documents</a>
+        <p class="information">
+            <strong>Be notified when new version is available!</strong>
+            <br />
+            inorder to be notified when a new version is released or a newer version of the
+            documentation is available, <a href="http://forum.jgeez.com/">please join my forum here</a>
+        </p>
+        <p class="information">
+            <strong>Looking for older version of the library?</strong>
+            <br />
+            if you are looking for previous versions of this library (doesn't apply if the version says 1.0.0.0 :)), follow <a  target="_blank" href="https://github.com/samqty/jGeez">this link to our
+            public version/source control repository</a> 
+        </p>
+        </div>
+    
+    <br class="reset" />
+    <h2 style="background-position:left -160px; width:560px;">Previous Releases</h2>
+
+    <div class="wide_left_column old">
+        <h2 class="productinfo">Product Info</h2>
+        <p>- Version: jGeez 1.1.0.0</p>
+        <p>- Release Date: April 29, 2012</p>
+        <h2>New Features</h2>
+        <p>- Auto font/unicode detection</p>
+        <p>- Attribute driven implementation</p>
+        <p>- Default toggle button and help button implementation </p>
+        <h2 class="enhancement">Enhancements</h2>
+        <p>- Implicit library integration, only two lines of code is required</p>
+        <p>- Online CDN(shared server) availablity for jGeez library </p>
+        <h2 class="bugfix">Bug Fixes</h2>
+        <p>- "<span class="geeztext" style="font-size:18px;">ቋ</span>" character was missing</p>
+    </div>
+
+     <div class="wide_left_column old">
+        <h2 class="productinfo">Product Info</h2>
+        <p>- Version: jGeez 1.0.0.0</p>
+        <p>- Release Date: Feb 29, 2012</p>
+        <h2>New Features</h2>
+        <p>- Cross-Browser support; works in ie 6+, mozilla fire fox 2+, google chrome 10+ and Safari 2+</p>
+        <p>- Multi-device support; works on desktops, tablets and smartphones</p>
+        <p>- No font or software installation required by the end user</p>
+        <p>- Very simple and intuitive implimentation for web developers</p>
+        <p>- Very light weight library &lt; 2kb </p>
+        <p>- End user typing help documentation included</p>
+        <h2 class="enhancement">Enhancements</h2>
+        <p>No new enhancements in this release</p>
+        <h2 class="bugfix">Bug Fixes</h2>
+        <p>No bug fixes in this release</p>
+    </div>  
+
+}

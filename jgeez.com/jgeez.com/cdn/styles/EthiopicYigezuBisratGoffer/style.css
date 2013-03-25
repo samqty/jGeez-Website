@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'EthiopicYigezuBisratGoffer';
+    src: url('fonts/EthiopicYigezuBisratGoffer.eot');
+    src: url('fonts/EthiopicYigezuBisratGoffer.eot?#iefix') format('embedded-opentype'),
+         url('fonts/EthiopicYigezuBisratGoffer.woff') format('woff'),
+         url('fonts/EthiopicYigezuBisratGoffer.ttf') format('truetype'),
+         url('fonts/EthiopicYigezuBisratGoffer.svg#EthiopicYigezuBisratGoffer') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.geeztext{
+    font-family: 'EthiopicYigezuBisratGoffer',Helvetica;
+}
+
+input,textarea
+{
+    font-family: 'EthiopicYigezuBisratGoffer',Helvetica;
+}

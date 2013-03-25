@@ -1,0 +1,62 @@
+﻿@section header
+{
+    
+}
+
+@section body
+{
+     <div class="home_content wide_left_column">
+    <p>
+        jGeez is a simple javascript library (AKA JQuery plugin) that enables web developers to easily 
+        integrate geez/amharic online typing in their web applications. below is a simple demonistartion of its implementation:
+    </p>
+    <div class="sample_area">
+        <textarea jgeez-showtogglebutton="false" jgeez-showhelpbutton="false" rows="4" id="geeztextbox" ></textarea>
+    </div>
+    <span> the HTML code for this sample:</span>
+    <div class="sample_code">
+        &lt;script type=&quot;text/javascript&quot;  src=<span class="blue">&quot;http://code.jquery.com/jquery-1.7.2.min.js&quot;</span>&gt;&lt;/script&gt; 
+        <br />
+        &lt;script type=&quot;text/javascript&quot; src=<span class="blue">&quot;http://www.jgeez.com/cdn/jquery.jgeez.min.js&quot;</span>&gt;&lt;/script&gt;
+        <br />
+        </div>
+    </div>
+    <div class="featuredcolumn right_small_column">
+        <ul>
+            <li><p class="featured">Cross-Browser support; works in ie 6+, mozilla fire fox 2+, google chrome 10+ and Safari 2+</p></li>
+            <li><p class="featured">Multi-device support; works on desktops, tablets and smartphones</p></li>
+            <li><p class="featured">Missing font/unicode detection</p></li>
+            <li><p class="featured">No font or software installation required by the end user</p></li>
+            <li><p class="featured">Very simple and intuitive implimentation (as small as two line implementation) for web developers</p></li>
+            <li><p class="featured">Very light weight library &lt; 10kb </p></li>
+            <li><p class="featured">End user typing help documentation included</p></li>
+            <li><p class="featured"><span class="new">[new]</span> Available in multiple fonts styles</p></li>
+        </ul>
+        <br class="reset" />
+        <div>
+            <a class="samples" href="@Url.Action("Samples")">more samples</a>
+            <a class="library" href="@Url.Action("Downloads")">download library</a>
+        </div>
+        <br class="reset" />
+    </div>
+    <style type="text/css">
+        .users {
+            border:1px solid silver;
+            margin:3px;
+        }
+    </style>
+    <div style="height:300px; width:590px;float:left;">
+        <h4> Who is using jgeez:</h4>
+        <div style="vertical-align:text-top;">
+            <a href="http://www.ethiowired.com" target="_blank""><img class="users" style="float:left;margin-top:20px;" src="../../Content/themes/base/images/ethiowired.png" /></a> 
+            <a href="http://www.ethiopianlyrics.com" target="_blank""><img class="users" style="float:left;margin-top:5px;" src="../../Content/themes/base/images/ethiopianlyrics.png" /></a>
+            <a href="http://www.intaps.com" target="_blank""><img class="users" style="float:left;margin-top:10px;" src="../../Content/themes/base/images/intaps.png" /></a>
+            <br class="reset" />
+        </div>
+        <div style="margin-top:10px; font-style:italic;text-align:right"> Are you using jgeez? let me know on jgeez facebook page</div>
+    </div>
+    <div style="height:210px;width:350px;float:right;padding:7px;">
+        <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fjgeezlibrary&amp;width=350&amp;height=200&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color=silver&amp;header=false&amp;appId=352432114820901" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:350px; height:200px;background-color:white;" allowTransparency="true" ></iframe>
+        <br class="reset" />
+    </div>
+}

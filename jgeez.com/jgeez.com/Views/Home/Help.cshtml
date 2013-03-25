@@ -1,0 +1,442 @@
+﻿@{
+    ViewBag.Title = "Help";
+    Layout = null;
+}
+<html>
+<head>
+    <title>Geez Typeing Help</title> 
+    <script src="../../Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="../../jgeez/jquery.jgeez.core.js" type="text/javascript"></script>
+    <script src="../../jgeez/jquery.jgeez.ui.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#alphabetcontainer").each(function () {
+                for (var i in JGeezUtility.UNICODEMatrix) {
+                    _row = $("<div></div>");
+                    _row.css({ "padding-top": "5px" });
+
+                    _englishcaption = $("<div></div>");
+                    _englishcaption.css({ "text-align": "right"
+                    , "width": "120px"
+                    , "height": "20px"
+                    , "float": "left"
+                    });
+
+                    _englishcaption.append('<a class="alphabetkey" >' + JGeezUtility.UNICODEMatrix[i][1].toLowerCase() + '</a>');
+                    if (JGeezUtility.UNICODEMatrix[i][2]
+                    || (JGeezUtility.UNICODEMatrix[i][1].toLowerCase() != JGeezUtility.UNICODEMatrix[i][1]
+                        && JGeezUtility.UNICODEMatrix[i].length==2))
+                        _englishcaption.append('<a class="alphabetshiftkey" >&nbsp</a>');
+                    if (JGeezUtility.UNICODEMatrix[i][3])
+                        _englishcaption.append('<a class="alphabetcapskey" >CAPS</a>');
+                    _row.append(_englishcaption);
+
+                    _row.append('<a style="" class="geezalphabet geeztext">' + JGeezUtility.UNICODE(Character(JGeezUtility.UNICODEMatrix[i][1], JGeezUtility.UNICODEMatrix[i][2], 0)) + '</a>');
+                    if (!JGeezUtility.isModifier(JGeezUtility.UNICODEMatrix[i][1])) {
+                        _row.append('<a style="" class="geezalphabet geeztext">' + JGeezUtility.UNICODE(Character(JGeezUtility.UNICODEMatrix[i][1] + "u", JGeezUtility.UNICODEMatrix[i][2], 0)) + '</a>');
+                        _row.append('<a style="" class="geezalphabet geeztext">' + JGeezUtility.UNICODE(Character(JGeezUtility.UNICODEMatrix[i][1] + "i", JGeezUtility.UNICODEMatrix[i][2], 0)) + '</a>');
+                        _row.append('<a style="" class="geezalphabet geeztext">' + JGeezUtility.UNICODE(Character(JGeezUtility.UNICODEMatrix[i][1] + "a", JGeezUtility.UNICODEMatrix[i][2], 0)) + '</a>');
+                        _row.append('<a style="" class="geezalphabet geeztext">' + JGeezUtility.UNICODE(Character(JGeezUtility.UNICODEMatrix[i][1] + "y", JGeezUtility.UNICODEMatrix[i][2], 0)) + '</a>');
+                        _row.append('<a style="" class="geezalphabet geeztext">' + JGeezUtility.UNICODE(Character(JGeezUtility.UNICODEMatrix[i][1] + "e", JGeezUtility.UNICODEMatrix[i][2], 0)) + '</a>');
+                        _row.append('<a style="" class="geezalphabet geeztext">' + JGeezUtility.UNICODE(Character(JGeezUtility.UNICODEMatrix[i][1] + "o", JGeezUtility.UNICODEMatrix[i][2], 0)) + '</a>');
+                    }
+                    _row.append('<br class="reset"/>');
+
+                    $(this).append(_row);
+                }
+            });
+        });
+    </script>
+
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="../../jgeez/style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body{text-align:center;}
+        #helpheader
+        {
+            font-size: 24px;
+            line-height:40px;
+            vertical-align:middle;
+            background-image:url('../../Content/themes/base/images/help_small.png');
+            background-repeat:no-repeat;
+            padding-left:48px;
+        }
+        .key
+        {
+            background-image:url('../../Content/themes/base/images/key_bk.png');
+            background-repeat:no-repeat;
+            padding:7px 12px;
+            color:Gray;
+            font-size:14px;
+            font-weight:bold;
+            line-height:16px;
+        }
+        
+        .keyheader
+        {
+            background-image:url('../../Content/themes/base/images/key_bk.png');
+            background-position:-3px 0px;
+            float:right;
+            width:26px;
+            height:27px;
+            color:Gray;
+            font-size:14px;
+            font-weight:bold;
+            line-height:20px;
+            padding-top:5px;
+            text-align:center;
+        }
+        
+        .difficultkey
+        {
+            background-image:url('../../Content/themes/base/images/key_bk.png');
+            background-repeat:no-repeat;
+            padding:7px 12px;
+            color:Gray;
+            font-size:14px;
+            font-weight:bold;
+            padding-top:10px;
+        }
+        
+        .shiftkey
+        {
+            background-image:url('../../Content/themes/base/images/shift_bk.png');
+        }
+        
+        .capskey
+        {
+            background-image:url('../../Content/themes/base/images/caps_bk.png');
+            background-repeat:no-repeat;
+            padding:7px 15px;
+            color:Gray;
+            font-size:14px;
+            font-weight:bold;
+            padding-top:10px;
+        }
+        
+        .alphabetkey
+        {
+            background-image:url('../../Content/themes/base/images/key_bk.png');
+            background-repeat:no-repeat;
+            background-position:-3px 0px;
+            float:right;
+            width:26px;
+            color:Gray;
+            font-size:14px;
+            font-weight:bold;
+            padding-top:5px;
+            text-align:center;
+        }
+        
+         .alphabetshiftkey
+         {
+            background-image:url('../../Content/themes/base/images/shift_bk.png');
+            background-repeat:no-repeat;
+            background-position:-3px 0px;
+            float:right;
+            width:26px;
+            color:Gray;
+            font-size:14px;
+            font-weight:bold;
+            padding-top:10px;
+        }
+        
+        .alphabetcapskey
+        {
+            background-image:url('../../Content/themes/base/images/caps_bk.png');
+            background-repeat:no-repeat;
+            background-position:-2px 0px;
+            color:Gray;
+            font-size:14px;
+            font-weight:bold;
+            float:right;
+            width:61px;
+            text-align:center;
+            padding-top:5px;
+        }
+        
+        .typing
+        {
+            background-image:url('../../Content/themes/base/images/typing.png');
+            background-repeat:no-repeat;
+            padding:5px 12px;
+            padding-right:100px;
+            padding-top:10px;
+            padding-left:9px;
+            color:Gray;
+            font-size:16px;
+            line-height:20px;
+            font-family:'GeezRegular'
+        }
+        .geeztext
+        {
+            font-family:'GeezRegular'
+        }
+        .difficult
+        {
+            float:left;
+            border:1px solid silver;
+            margin:2px;
+            height:75px;
+        }
+        .difficultletter
+        {
+            font-size:60px;
+            line-height:50px;
+            text-align:center;
+        }
+        
+        .alphabetcolumn
+        {
+            width:303px;
+            float:left;
+            margin-right:2px;
+        }
+        
+        .geezalphabet
+        {
+            float:left;
+            width:26px;
+            text-align:center;
+            font-size:20px;
+            line-height:25px;
+            vertical-align:bottom;
+            padding-top:4px;
+        }
+        h3
+        {
+            text-transform:uppercase;
+            letter-spacing:2px;
+            font-size:13px;
+            text-align:left;
+        }
+        h1{text-align:left;}
+    </style>
+
+</head>
+<body>
+    <div class="centered">
+    <div class="onecolumn" style="padding:5px;">
+        <h1 id="helpheader">Geez Typing Help </h1>
+        <div style="float: left; width: 430px;">
+            <h3 style="margin-right:10px; color:#50A2D4;border-bottom:1px solid #50A2D4;"><strong>How to type in Geez?</strong> </h3> 
+            <div>
+               <p> 
+                    1) Press the root key (refer the key map for all English to geez conversion), lets try "h" as an example
+               </p>
+               <p style="">
+                    <a class="key">h</a>
+                    you should see 
+                    <a class="typing geeztext">ሀ</a>
+               </p>
+               <p>
+                2) If that is the geez letter you were looking for then great! But if you want to
+                   modify it to the other sounds of the same root category, press any one of the modifier
+                   keys. Like in the example below.
+               </p>
+               <p style="">
+                    <a class="key">u</a>
+                    you should see 
+                    <a class="typing geeztext">ሁ</a>
+                 </p>
+                 <p>
+                    <a class="key">i&nbsp</a>
+                    you should see 
+                    <a class="typing geeztext">ሂ</a>
+                </p>
+                 <p>
+                    <a class="key">a</a>
+                    you should see 
+                    <a class="typing geeztext">ሃ</a>
+                </p>
+                 <p>
+                    <a class="key">y</a>
+                    you should see 
+                    <a class="typing geeztext">ሄ</a>
+                </p>
+                 <p>
+                    <a class="key">e</a>
+                    you should see 
+                    <a class="typing geeztext">ህ</a>
+                </p>
+                 <p>
+                    <a class="key">o</a>
+                    you should see 
+                    <a class="typing geeztext">ሆ</a>
+               </p>
+               <p>
+               3) And that is it , as a reminder the root can also be a combination of one english letter
+                and/or shift or caps keys
+               </p>
+            </div>
+        </div>
+        <div style="float: left; width: 480px;">
+
+            <div style="float:left;width:300px; padding-right:5px;">
+                <h3 style="text-align:right;padding-right:5px;color:#6C8F4C;border-bottom:1px solid #6C8F4C;"> <strong>The full alphabet</strong></h3>
+                <div class="alphabetcolumn">
+                    
+                    <div style="width:145px;float:left; height:25px;">
+                    
+                    </div>
+                    <div style="float:left; height:25px;">
+                        <a class="keyheader">o</a>
+                        <a class="keyheader">e</a>
+                        <a class="keyheader">y</a>
+                        <a class="keyheader">a</a>
+                        <a class="keyheader">i&nbsp</a>
+                        <a class="keyheader">u</a>
+                    </div>
+                    <div id="alphabetcontainer">
+                    </div>
+                    <br class="reset" />
+                </div>
+            </div>
+
+            <div style="float:left; width:160px;margin-left:10px;">
+            <h3 style="color:#E04226;border-bottom:1px solid #E04226;"> <strong>Difficult Letters</strong></h3>
+
+            <div class="difficult">
+                <div style="text-align:center;">
+                    <a class="geeztext difficultletter" style="">
+                    ቋ
+                    </a>
+                </div>
+                <div class="reset" style="width:150px;">
+                    <a class="difficultkey shiftkey">&nbsp</a>+
+                    <a class="difficultkey">q</a>+
+                    <a class="difficultkey">u</a>
+                </div>
+                <br class="reset" />
+            </div>
+
+            <div class="difficult">
+                <div style="text-align:center;">
+                    <a class="geeztext difficultletter" style="">
+                    አ
+                    </a>
+                </div>
+                <div>
+                    <a class="difficultkey">x</a>
+                </div>
+                <br class="reset" />
+            </div>
+            
+            <div class="difficult">
+                <div style="text-align:center;">
+                    <a class="geeztext difficultletter" style="">
+                    ሸ
+                    </a>
+                </div>
+                <div class="reset">
+                    <a class="difficultkey shiftkey">&nbsp</a>+
+                    <a class="difficultkey">s</a>
+                </div>
+                <br class="reset" />
+            </div>
+
+            <div class="difficult">
+                <div style="text-align:center;">
+                    <a class="geeztext difficultletter" style="">
+                    ቀ
+                    </a>
+                </div>
+                <div>
+                    <a class="difficultkey">q</a>
+                </div>
+                <br class="reset" />
+            </div>
+
+            <div class="difficult">
+                <div style="text-align:center;">
+                    <a class="geeztext difficultletter" style="">
+                    ጸ
+                    </a>
+                </div>
+                <div>
+                    <a class="capskey">CAPS</a>+
+                    <a class="difficultkey shiftkey">&nbsp</a>+
+                    <a class="difficultkey">t&nbsp</a>
+                </div>
+                <br class="reset" />
+            </div>
+
+            <div class="difficult">
+                <div style="text-align:center;">
+                    <a class="geeztext difficultletter" style="">
+                    የ
+                    </a>
+                </div>
+                <div>
+                    <a class="difficultkey shiftkey">&nbsp</a>+
+                    <a class="difficultkey">y</a>
+                </div>
+                <br class="reset" />
+            </div>
+
+            <div class="difficult">
+                <div style="text-align:center;">
+                    <a class="geeztext difficultletter" style="">
+                    ጨ
+                    </a>
+                </div>
+                <div>
+                    <a class="difficultkey shiftkey">&nbsp</a>+
+                    <a class="difficultkey">c</a>
+                </div>
+                <br class="reset" />
+            </div>
+
+            <div class="difficult">
+                <div style="text-align:center;">
+                    <a class="geeztext difficultletter" style="">
+                    ኘ
+                    </a>
+                </div>
+                <div>
+                    <a class="difficultkey shiftkey">&nbsp</a>+
+                    <a class="difficultkey">n</a>
+                </div>
+                <br class="reset" />
+            </div>
+
+            <div class="difficult">
+                <div style="text-align:center;">
+                    <a class="geeztext difficultletter" style="">
+                    ጠ
+                    </a>
+                </div>
+                <div>
+                    <a class="difficultkey shiftkey">&nbsp</a>+
+                    <a class="difficultkey">t</a>
+                </div>
+                <br class="reset" />
+            </div>
+
+            <div class="difficult">
+                <div style="text-align:center;">
+                    <a class="geeztext difficultletter" style="">
+                    ኀ
+                    </a>
+                </div>
+                <div>
+                    <a class="capskey">CAPS</a>+
+                    <a class="difficultkey shiftkey">&nbsp</a>+
+                    <a class="difficultkey">h</a>
+                </div>
+                <br class="reset" />
+            </div>
+            
+            </div>
+            
+        </div>
+        <hr class="reset" style="border-top:1px solid silver;" />
+        <div style="text-align:center;">
+        *this documentation is only applicabe to sites that have implemented jGeez library<br />
+            powered by jgeez</div>
+        <br class="reset" />
+    </div>
+    </div>
+</body>
+</html>

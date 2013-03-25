@@ -1,0 +1,143 @@
+﻿.button
+{
+    color:#6E6E6E;
+    border:1px solid gainsboro;
+    padding:3px;
+    cursor:pointer;
+    text-align:center;
+}
+
+a:hover.button
+{
+    border-color:Silver;
+}
+
+.smallbutton
+{
+    color:#6E6E6E;
+    border:1px solid gainsboro;
+    padding:3px 5px 0px 5px;
+    cursor:pointer;
+}
+
+.icon-button
+{
+    padding-left: 19px;
+}
+
+#geezplain,#chatgeezbutton
+{ 
+    background-image: url('Images/ethiopia_flag.png');
+    background-repeat: no-repeat;
+    background-position:2px center;
+}
+
+#englishplain,#chatenglishbutton
+{
+    background-image: url('Images/united_kindom.png');
+    background-repeat: no-repeat;
+    background-position:2px center;
+}
+
+#commenttextbox1,#chattextbox{
+    font-family:'GeezRegular';
+    font-size:15px;
+}
+
+.comment
+{
+    background-image: url('Images/comment.png');
+    background-repeat: no-repeat;
+    padding-left:36px;
+    min-height:34px;
+    line-height:34px;
+    vertical-align:middle;
+    font-size:15px;
+    font-weight:bold;
+    margin:4px;
+}
+
+.geeztext
+{
+    font-family:'GeezRegular';
+    font-size:15px;
+}
+
+#firstnametxt,#middlenametxt,#lastnametxt
+{
+    width:300px;
+    font-family:'GeezRegular';
+    font-size:15px;
+}
+
+.geeztoggle_small
+{
+    background-image: url('Images/smalltoggle.png');
+    background-repeat: no-repeat;
+    background-position:-3px -3px;
+    padding:4px 8px;
+    cursor:pointer;
+}
+
+.englishtoggle_small
+{
+    background-image: url('Images/smalltoggle.png');
+    background-repeat: no-repeat;
+    background-position:-3px -28px;
+    padding:4px 8px;
+    cursor:pointer;
+}
+
+.chat
+{
+    background-image: url('Images/chat.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left:34px;
+    line-height:34px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.fancyradio
+{
+    background-position: -22px 0px;
+    background-image: url('Images/fancy-radio-checkbox.png');
+    background-repeat: no-repeat;
+    width:60px;
+    padding-left:20px;
+}
+
+.fancychecked
+{
+    background-position: -22px -74px;
+}
+
+#commenttextbox2
+{
+    font-family:'GeezRegular';
+    font-size:15px;
+}
+
+p.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:1.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+.codeblock
+{
+    height: 400px;
+    overflow: scroll;
+}
+
+#chathelpbutton
+{
+    background-image: url('Images/helpsmall.png');
+    background-repeat: no-repeat;
+    background-position:left center;
+    margin-left:5px;
+}
